@@ -50,5 +50,5 @@ if media < 5:
   print(f"Sua nota é {media}\nAluno reprovado")
 elif media >= 5 and media <= 7:
   print(f"Sua nota é {media}\nAluno está em recuperação")
-elif:
+else:
   print(f"Sua nota é {media}\nAluno está Aprovado")

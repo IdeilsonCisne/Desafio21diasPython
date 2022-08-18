@@ -13,7 +13,7 @@ print("Digite seu nome: ")
 nome = input()
 print("Digite seu telefone: ")
 telefone = input()
-print("Digite seu telefone: ")
+print("Digite seu Endereço: ")
 endereço = input()
 
 os.system('clear')
