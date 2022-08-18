@@ -249,11 +249,11 @@ while True:
     exercicio_d4()
   elif opcao == 4:
     exercicio_d5()
-  elif opcao == 4:
+  elif opcao == 5:
     exercicio_d6()
-  elif opcao == 4:
+  elif opcao == 6:
     exercicio_d7()
-  elif opcao == 4:
+  elif opcao == 7:
     exercicio_d8()
   else:
     print("Opção inválida")
