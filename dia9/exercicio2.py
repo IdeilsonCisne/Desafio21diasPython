@@ -9,4 +9,26 @@ e acesso o exercício através de uma organização em menu.
 Neste exercício quero que vocês chamem os arquivos originais depois
 de ser refatorado em funções.
 """
-from dia2.exercicio1 import exercicio1
+import importlib.util
+import os
+import sys
+
+def importa_funcao(pasta, *arquivos):
+  modulos = []
+  for arquivo in arquivos:
+    file_path = os.path.join(os.path.dirname(__file__), f"../{pasta}/{arquivo}")
+    foo_spec = importlib.util.spec_from_file_location(pasta, file_path)
+    foo_module = importlib.util.module_from_spec(foo_spec)
+    sys.modules[pasta] = foo_module
+    foo_spec.loader.exec_module(foo_module)
+    modulos.append(sys.modules[pasta])
+  return modulos
+
+funcoes = importa_funcao("dia2", "exercicio1.py")
+for funcao in funcoes:
+  funcao.exec()
+
+  # funcoes = importa_funcao("dia3", "exercicio1.py", "exercicio2.py", "exercicio3.py")
+  # for funcao in funcoes:
+  #   funcao.exec()
+
