@@ -8,18 +8,23 @@
 # ===================================================================
 import os
 
-print(" ================= Bem vindo ao sistema de cadastros ================= ")
-print("Digite seu nome: ")
-nome = input()
-print("Digite seu telefone: ")
-telefone = input()
-print("Digite seu Endereço: ")
-endereço = input()
+def exec():
 
-os.system('clear')
+  print(" ================= Bem vindo ao sistema de cadastros ================= ")
+  print("Digite seu nome: ")
+  nome = input()
+  print("Digite seu telefone: ")
+  telefone = input()
+  print("Digite seu Endereço: ")
+  endereço = input()
 
-print(" ================= Programa de formatação de dados ================= ")
-print("Nome:" + nome)
-print("Telefone:" + telefone)
-print("Endereço:" + endereço)
-print(" =================================================================== ")
+  os.system('clear')
+
+  print(" ================= Programa de formatação de dados ================= ")
+  print("Nome:" + nome)
+  print("Telefone:" + telefone)
+  print("Endereço:" + endereço)
+  print(" =================================================================== ")
+
+if __name__== 'main':
+  exec()

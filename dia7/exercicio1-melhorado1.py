@@ -22,37 +22,40 @@ Nome: Lana
 Média:  5.5
 Situação: recuperação
 """
+def exec():
+  lista = []
+  contador = 1
 
-lista = []
-contador = 1
+  while contador <= 3:
+    aluno = []
 
-while contador <= 3:
-  aluno = []
+    nome = input(f"Digite o nome do {contador}º aluno: ")
+    aluno.append(nome)
+    nota1 = float(input(f"Digite a {contador}ª nota: "))
+    nota2 = float(input(f"Digite a {contador+1}ª nota: "))
+    nota3 = float(input(f"Digite a {contador+2}ª nota: "))
 
-  nome = input(f"Digite o nome do {contador}º aluno: ")
-  aluno.append(nome)
-  nota1 = float(input(f"Digite a {contador}ª nota: "))
-  nota2 = float(input(f"Digite a {contador+1}ª nota: "))
-  nota3 = float(input(f"Digite a {contador+2}ª nota: "))
+    media = (nota1 + nota2 + nota3)/3
+    aluno.append(media)
 
-  media = (nota1 + nota2 + nota3)/3
-  aluno.append(media)
+    if media < 5:
+      situacao = "Reprovado"
+    elif media >=5 and media <=7:
+      situacao = "Recuperação"
+    else:
+      situacao = "Aprovado"
+    
+    aluno.append(situacao)
+    lista.append(aluno)
+    contador += 1
+    print("-"*30)
 
-  if media < 5:
-    situacao = "Reprovado"
-  elif media >=5 and media <=7:
-    situacao = "Recuperação"
-  else:
-    situacao = "Aprovado"
-  
-  aluno.append(situacao)
-  lista.append(aluno)
-  contador += 1
-  print("-"*30)
+  print("===========[lista de alunos]===========")
+  for aluno in lista:
+    print(f"Nome: {aluno[0]}")
+    print(f"Média: {aluno[1]}")
+    print(f"Situação: {aluno[2]}")
+    print("-"*30)
 
-print("===========[lista de alunos]===========")
-for aluno in lista:
-  print(f"Nome: {aluno[0]}")
-  print(f"Média: {aluno[1]}")
-  print(f"Situação: {aluno[2]}")
-  print("-"*30)
+if __name__== 'main':
+  exec()

@@ -22,27 +22,30 @@ Digite o valor que o senhor(a) xxx que deseja colocar:
 :::: Ficou com xxx litros de um total de yyy de combustível no tanque no posto ::::
 :::: O posto está operando agora com x% de sua capacidade de combustível ::::
 """
+def exec():
+  print("========== Sistema de combustível ===============")
+  print("Digite a quantidade de litros padrão:")
+  litro_posto = float(input())
+  print("Digite a quantidade de litros para preencher a quantidade total:")
+  atual_posto = float(input())
 
-print("========== Sistema de combustível ===============")
-print("Digite a quantidade de litros padrão:")
-litro_posto = float(input())
-print("Digite a quantidade de litros para preencher a quantidade total:")
-atual_posto = float(input())
+  print(f"A capacidade de nossos tanques é: {litro_posto} litros")
+  print(f"A quantidade que ficou no posto foi: {atual_posto} litros")
+  total_porcentagem = atual_posto / litro_posto * 100
+  print("Estamos com a capacidade de {:0.2f}% em nossos tanques".format(total_porcentagem))
 
-print(f"A capacidade de nossos tanques é: {litro_posto} litros")
-print(f"A quantidade que ficou no posto foi: {atual_posto} litros")
-total_porcentagem = atual_posto / litro_posto * 100
-print("Estamos com a capacidade de {:0.2f}% em nossos tanques".format(total_porcentagem))
+  print(f":::: Chegou um cliente, bora vender? :::::")
+  print(f"Digite o nome do cliente:")
+  nome_consumidor = input()
 
-print(f":::: Chegou um cliente, bora vender? :::::")
-print(f"Digite o nome do cliente:")
-nome_consumidor = input()
+  print(f"Qual a quantidade de litros que o senhor(a) {nome_consumidor} que deseja colocar ?")
+  quantidade_cliente = float(input())
 
-print(f"Qual a quantidade de litros que o senhor(a) {nome_consumidor} que deseja colocar ?")
-quantidade_cliente = float(input())
+  sobrou_no_tanque_do_posto = atual_posto - quantidade_cliente
+  total_porcentagem = sobrou_no_tanque_do_posto / litro_posto * 100
 
-sobrou_no_tanque_do_posto = atual_posto - quantidade_cliente
-total_porcentagem = sobrou_no_tanque_do_posto / litro_posto * 100
+  print(f"::: Ficou com {sobrou_no_tanque_do_posto} litros de um total de {atual_posto} litros de combustível no tanque do posto ::::")
+  print("::: O posto está operando agora com {:0.2f}% de sua capacidade de combustível :::".format(total_porcentagem))
 
-print(f"::: Ficou com {sobrou_no_tanque_do_posto} litros de um total de {atual_posto} litros de combustível no tanque do posto ::::")
-print("::: O posto está operando agora com {:0.2f}% de sua capacidade de combustível :::".format(total_porcentagem))
+if __name__== 'main':
+  exec()

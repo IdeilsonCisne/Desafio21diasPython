@@ -14,23 +14,27 @@ Digite um número para o iterador da tabuada
 3 x 5 = 15
 """
 
-print(" ====================================================== ")
-print(" ================= [Cálculo de tabuada] =============== ")
-print(" ===================== [Forma WHILE] ================== ")
-print(" ====================================================== ")
+def exec():
+  print(" ====================================================== ")
+  print(" ================= [Cálculo de tabuada] =============== ")
+  print(" ===================== [Forma WHILE] ================== ")
+  print(" ====================================================== ")
 
-numero = int(input("Digite um número multiplicador: "))
-iterador = int(input("Digite um número iterador: "))
+  numero = int(input("Digite um número multiplicador: "))
+  iterador = int(input("Digite um número iterador: "))
 
-i = 1
-while i <= iterador:
-  print(f"{i} x {numero} = {i * numero}")
-  i += 1
+  i = 1
+  while i <= iterador:
+    print(f"{i} x {numero} = {i * numero}")
+    i += 1
 
-print(" ====================================================== ")
-print(" ================= [Cálculo de tabuada] =============== ")
-print(" ===================== [Forma FOR] ================== ")
-print(" ====================================================== ")
+  print(" ====================================================== ")
+  print(" ================= [Cálculo de tabuada] =============== ")
+  print(" ===================== [Forma FOR] ================== ")
+  print(" ====================================================== ")
 
-for i in range(1, iterador+1):
-  print(f"{i} x {numero} = {i * numero}")
+  for i in range(1, iterador+1):
+    print(f"{i} x {numero} = {i * numero}")
+
+if __name__== 'main':
+  exec()
