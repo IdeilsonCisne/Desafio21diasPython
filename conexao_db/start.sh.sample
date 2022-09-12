@@ -1,0 +1,7 @@
+export HOST='<seu host>'
+export DATABASE='<seu database>'
+export USER='<seu user>'
+export PASS='<seu pass>'
+
+pipenv install
+pipenv run puthon init.py
